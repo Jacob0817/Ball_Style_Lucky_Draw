@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh_cn" class="" data-redeviation-bs-uid="45136">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style data-merge-styles="true"></style>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Cache-Control" content="no-siteapp">
+        <link rel="stylesheet" type="text/css" href="./LuckyDraw/common.min.css">
+        <link rel="stylesheet" type="text/css" href="./LuckyDraw/main.min.css">
+        <title>H5 LuckyDraw</title>
+        <meta name="theme-color" content="#6091ba">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+    </head>
+    <body class="tools tools-luckyDraw">
+        <div class="container">
+            <div class="col-lg-8 col-lg-offset-2">
+                <div class="pull-right">
+                    <div class="text-right">
+                        <button id="reset" class="btn btn-xs btn-danger">重置</button>
+                        <button id="settings" class="btn btn-xs btn-primary" data-toggle="modal" data-target="#drawModal">设置</button>
+                    </div>
+                </div>
+                <h1 class="title">
+                    <span id="title"></span>
+                </h1>
+                <div class="clearfix"></div>
+                    <hr style="margin: 10px 0 0">
+                        <div class="row">
+                            <div class="col-sm-2 text-right">
+                                <button id="draw" class="btn btn-success">抽奖</button>
+                            </div>
+                            <div class="col-sm-8">
+                                <canvas id="canvas" width="600" height="600" class="center-block"></canvas>
+                            </div>
+                            <div class="col-sm-2">
+                                <ul id="drawn" style="height:600px;overflow-y:auto;font-size:16px" class="list-unstyled"></ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        <div class="modal fade" id="drawModal" tabindex="-1" role="dialog" aria-labelledby="drawModalTitle" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">×</span>
+                        <span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="drawModalTitle">设置</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="luckyDrawTitle">标题</label>
+                            <input type="text" class="form-control" id="luckyDrawTitle" value="LuckyDraw" spellcheck="false" data-ms-editor="true">
+                            <editor-squiggler>
+                                <style>
+                                    @media print {
+                                        .ms-editor-squiggles-container {
+                                            display:none !important;
+                                        }
+                                    }
+                                    .ms-editor-squiggles-container {
+                                        all: initial;
+                                    }</style>
+                                <div class="ms-editor-squiggles-container"></div>
+                            </editor-squiggler>
+                        </div>
+                        <div class="form-group">
+                            <label for="luckyDrawLogo">Logo地址</label>
+                            <input type="text" class="form-control" id="luckyDrawLogo" value="" spellcheck="false" data-ms-editor="true">
+                        </div>
+                        <div class="form-group">
+                            <label for="luckyDrawNames">名字（一行一个）</label>
+                            <textarea name="names" id="luckyDrawNames" class="form-control" rows="10" spellcheck="false" data-ms-editor="true"></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary" id="save">保存</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./LuckyDraw"></script>
+        <script async="" src="./LuckyDraw/analytics.js.下载"></script>
+        <script type="text/javascript" src="./LuckyDraw/common.min.js.下载"></script>
+        <script type="text/javascript" src="./LuckyDraw/main.min.js.下载"></script>
+        <script type="text/javascript" src="./LuckyDraw/tagcanvas.min.js.下载"></script>
+        <script type="text/javascript" src="./LuckyDraw/store+json2.min.js.下载"></script>
+        <script type="text/javascript" src="./LuckyDraw/luckyDraw.js.下载"></script>
+        <div id="tags" style="display: none;">
+            <a href="javascript:;" id="tag-placeholder" style="font-size: 4.5em;"> </a>
+        </div>
+    </body>
+</html>
